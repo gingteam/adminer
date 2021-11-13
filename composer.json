@@ -1,0 +1,20 @@
+{
+    "name": "gingteam/adminer",
+    "type": "project",
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+        "vrana/adminer": "^4.8"
+    },
+    "autoload": {
+        "classmap": ["public/plugins"]
+    },
+    "scripts": {
+		"post-install-cmd": "composer compile",
+		"post-update-cmd": "composer compile",
+        "compile": [
+			"php compile.php",
+			"composer dump-autoload --optimize"
+        ]
+	}
+}
