@@ -10,11 +10,14 @@
         "classmap": ["public/plugins"]
     },
     "scripts": {
-		"post-install-cmd": "composer compile",
-		"post-update-cmd": "composer compile",
+        "post-install-cmd": "composer compile",
+        "post-update-cmd": "composer compile",
         "compile": [
-			"php compile.php",
-			"composer dump-autoload --optimize"
+            "git submodule update --init",
+            "cp -r adminer-theme/lib/* public",
+            "php compile.php",
+            "composer dump-autoload --optimize",
+            "rm -rf adminer-theme"
         ]
-	}
+    }
 }

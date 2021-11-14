@@ -1,0 +1,3 @@
+[submodule "adminer-theme"]
+    path = adminer-theme
+    url = https://github.com/pematon/adminer-theme.git

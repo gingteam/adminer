@@ -1,3 +1,6 @@
 adminer.php
 vendor/
 composer.lock
+adminer-theme
+public/*
+!public/index.php
