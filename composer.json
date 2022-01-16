@@ -13,7 +13,7 @@
         "post-install-cmd": "composer compile",
         "post-update-cmd": "composer compile",
         "compile": [
-            "git submodule update --init",
+            "git clone --depth 1 https://github.com/pematon/adminer-theme.git",
             "cp -r adminer-theme/lib/* public",
             "php compile.php",
             "composer dump-autoload --optimize",
