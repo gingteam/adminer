@@ -10,6 +10,7 @@
         "classmap": ["public/plugins"]
     },
     "scripts": {
+        "post-create-project-cmd": "composer compile",
         "post-install-cmd": "composer compile",
         "post-update-cmd": "composer compile",
         "compile": [
